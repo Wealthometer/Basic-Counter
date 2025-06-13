@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Counter - Practice Exercise 5.2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="counter-card">
+            <div class="header">
+                <h1>🔢 Dynamic Counter</h1>
+                <p class="subtitle">Practice Exercise 5.2 - Do-While Loop Counter</p>
+            </div>
+
+            <div class="counter-display">
+                <div class="counter-value" id="counterValue">0</div>
+                <div class="counter-label">Current Count</div>
+            </div>
+
+            <div class="controls-section">
+                <div class="input-group">
+                    <label for="stepInput">Step Value:</label>
+                    <input type="number" id="stepInput" value="1" min="1" max="50">
+                </div>
+
+                <div class="input-group">
+                    <label for="targetInput">Target Value:</label>
+                    <input type="number" id="targetInput" value="100" min="10" max="1000">
+                </div>
+
+                <div class="input-group">
+                    <label for="speedInput">Animation Speed:</label>
+                    <select id="speedInput">
+                        <option value="1000">Slow (1s)</option>
+                        <option value="500" selected>Medium (0.5s)</option>
+                        <option value="200">Fast (0.2s)</option>
+                        <option value="100">Very Fast (0.1s)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="startBtn" class="btn-primary">
+                    <span class="btn-icon">▶️</span>
+                    Start Counter
+                </button>
+                <button id="pauseBtn" class="btn-secondary" disabled>
+                    <span class="btn-icon">⏸️</span>
+                    Pause
+                </button>
+                <button id="resetBtn" class="btn-tertiary">
+                    <span class="btn-icon">🔄</span>
+                    Reset
+                </button>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-info">
+                    <span id="progressText">Ready to start</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+            </div>
+
+            <div class="console-output">
+                <div class="console-header">
+                    <span class="console-title">📟 Console Output</span>
+                    <button id="clearConsole" class="clear-btn">Clear</button>
+                </div>
+                <div class="console-content" id="consoleContent">
+                    <div class="console-line">Counter initialized. Ready to start...</div>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-value" id="iterationsCount">0</div>
+                    <div class="stat-label">Iterations</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="elapsedTime">0s</div>
+                    <div class="stat-label">Elapsed Time</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="avgIncrement">0</div>
+                    <div class="stat-label">Avg/Iteration</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <h3>📚 Exercise Explanation</h3>
+            <p>This counter demonstrates a <strong>do-while loop</strong> that:</p>
+            <ul>
+                <li>Starts with counter = 0</li>
+                <li>Uses a step variable to increment</li>
+                <li>Prints counter value each iteration</li>
+                <li>Continues until counter ≥ target value</li>
+            </ul>
+            <div class="code-preview">
+                <pre><code>let counter = 0;
+let step = 5;
+do {
+    console.log(counter);
+    counter += step;
+} while (counter < 100);</code></pre>
+            </div>  
+        </div>
+    </div>
+
+        <a href="/Assignment/Functions/index.html" class="btn-primary" style=" background: linear-gradient(135deg, #e4e6ea, #bacbe9);
+                                                                                color: rgb(0, 0, 0); 
+                                                                                width: 500px; 
+                                                                                margin-top: 30px; 
+                                                                                display: flex; 
+                                                                                justify-content: center; 
+                                                                                align-items: center; 
+                                                                                text-decoration: none;   
+                                                                                padding: 14px 24px;
+                                                                                border: none;
+                                                                                border-radius: 12px;
+                                                                                font-size: 1rem;
+                                                                                font-weight: 600;
+                                                                                cursor: pointer;
+                                                                                transition: all 0.3s ease;
+                                                                                display: flex;
+                                                                                align-items: center;
+                                                                                gap: 8px;
+                                                                                min-width: 140px;
+                                                                                justify-content: center;">
+            See All My Assignment
+        </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
